@@ -1,0 +1,27 @@
+package javafirstexercise;
+
+public class exercise {
+
+	public static void main(String[] args) {
+		char c = 'B';
+		String name = "Liliano";
+		short numshrt = 12345;
+		int numint = 1234567890;
+		long numlong = 1234567890L;
+		float numfloat = 123456721312321312313344445555666777890.123123343434234342353453454645645565F;
+		double numdouble = 123456721312321312313344445555664556656676767878787879898989998989896767678787888889999767676767676767677777777777777777777888888888899999999999999999900000000000000099999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999988888888888888888888888888888888700045555666777890.123123343434234342353453454645645565;
+		boolean trufals = true;
+		
+		
+		System.out.println(c);
+		System.out.println(name);
+		System.out.println(numshrt);
+		System.out.println(numint);
+		System.out.println(numlong);
+		System.out.println(numfloat);
+		System.out.println(numdouble);
+		System.out.println(trufals);
+		
+	
+	}
+}

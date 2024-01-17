@@ -7,12 +7,16 @@ public class Vehicle {
 	private String detail;
 	private int year;
 
+//	default constructor
 	public Vehicle() {
+//		added super on a separate exercise
+		super();
 	}
 
-//	intial exercise was with 3 attributes only: typ, mob and yr
+//	constructor with with 3 attributes only: typ, mob and yr
 	public Vehicle(String type, String mobility, String detail, int year) {
-
+//		added super on a separate exercise
+		super();
 		this.type = type;
 		this.mobility = mobility;
 		this.detail = detail;
@@ -50,6 +54,14 @@ public class Vehicle {
 
 	public void setDetail(String detail) {
 		this.detail = detail;
+	}
+
+//existing print method for override exercise
+	public void print() {
+		System.out.println("Type :" + this.type);
+		System.out.println("Mobility :" + this.mobility);
+		System.out.println("Year :" + this.year);
+		System.out.println("Detail :" + this.detail);
 	}
 
 }

@@ -28,7 +28,7 @@ public class App {
 //		commented out due to the implementation of the to string
 		Car c = new Car("Car", "Land", "Chevy Camaro", 2012, true);
 
-//created a new car, called the overriden method to also display the exhaust feature 
+//created a new car, plane and bike called the overriden method to also display the exhaust feature 
 		Car p = new Car("Car", "Land", "BMW M3", 2018, true);
 
 //		iterate over the array of Car objects i created and call the print method (override in cars class) for each car
@@ -39,7 +39,7 @@ public class App {
 		}
 
 //		c.print();
-
+//		created vehicles and a respective text associated to each of them in this case a motto
 		fordgt.carMotto();
 		jet.planeMotto();
 		kawasaki.bikeMotto();
@@ -48,6 +48,7 @@ public class App {
 
 		vehicles.add(new Car("Car", "Land", "Subaru Imprenza", 1999, true));
 		vehicles.add(new Bike("Motorbike", "Land", "Harley-Davidson V-Rod 330", 2017, true));
+
 		System.out.println(vehicles);
 
 		for (Vehicle vehicle : vehicles) {
@@ -63,7 +64,7 @@ public class App {
 //		myGarage.print();
 
 //		Object o = new Object();
-
+//		creating new cars for comparison
 		Car c1 = new Car("Car", "Land", "VW Golf", 2021, true);
 		Car c2 = new Car("Car", "Land", "VW Golf", 2021, true);
 
@@ -84,6 +85,9 @@ public class App {
 		Vehicle new1 = new Car("Car", "Land", "Bugatti Mistral", 2016, true);
 		Vehicle new2 = new Car("Car", "Land", "Pagani Huayra Codalunga", 2024, true);
 		Vehicle new3 = new Car("Car", "Land", "Ferrari F50", 1997, true);
+		Vehicle new4 = new Plane("Plane", "Air", "Gulfstream G500", 2013, true);
+		Vehicle new5 = new Bike("Motorbike", "Land", "Suzuki SV650", 2023, true);
+		
 
 //		testing sorting new vehicles only 
 		Collections.sort(newVehicles);
@@ -92,6 +96,8 @@ public class App {
 		newVehicles.add(new2);
 		newVehicles.add(new1);
 		newVehicles.add(new3);
+		newVehicles.add(new4);
+		newVehicles.add(new5);
 		System.out.println("VEHICLES: " + newVehicles);
 
 //		testing after implementation of tostring

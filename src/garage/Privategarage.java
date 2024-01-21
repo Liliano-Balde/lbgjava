@@ -46,8 +46,9 @@ public class Privategarage {
 		int fixBill = 0;
 		for (Vehicle vehicle : vehicles) {
 			fixBill += vehicle.calcBill();
-			System.out.println("To fix all vehicles you will have to pay " + fixBill);
+			
 		}
+		System.out.println("To fix all vehicles you will have to pay " + fixBill);
 	}
 
 	@Override

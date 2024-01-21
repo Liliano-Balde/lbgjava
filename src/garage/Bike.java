@@ -1,15 +1,22 @@
 package garage;
 
+import java.util.Objects;
+
 public class Bike extends Vehicle {
 
 	private boolean twoWheeler;
 
 	public Bike(String type, String mobility, String detail, int year, boolean twoWheeler) {
-		setType(type);
-		setMobility(mobility);
-		setDetail(detail);
-		setYear(year);
+//		setType(type);
+//		setMobility(mobility);
+//		setDetail(detail);
+//		setYear(year);
+		super(type, mobility, detail, year);
 		this.twoWheeler = twoWheeler;
+	}
+
+	public Bike() {
+		super();
 	}
 
 	public boolean IstwoWheeler() {
@@ -28,8 +35,43 @@ public class Bike extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Motorbike [type=" + getType() + ", mobility=" + getMobility() + ", detail=" + getDetail() + ", year="
-				+ getYear() + "]";
+		return "Motorbike [id=" + getId() + ", type=" + getType() + ", mobility=" + getMobility() + ", detail="
+				+ getDetail() + ", year=" + getYear() + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(twoWheeler);
+
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Bike other = (Bike) obj;
+
+		if (!super.equals(obj)) {
+			return false;
+		}
+
+		if (this.twoWheeler != other.IstwoWheeler()) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public void setExhaust(boolean twoWheeler) {
+		this.twoWheeler = twoWheeler;
 	}
 
 	@Override

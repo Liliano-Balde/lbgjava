@@ -1,5 +1,7 @@
 package garage;
 
+import java.util.Objects;
+
 public class Plane extends Vehicle {
 
 	private boolean wings;
@@ -12,11 +14,19 @@ public class Plane extends Vehicle {
 		this.wings = wings;
 	}
 
+	public Plane() {
+		super();
+	}
+
 	public boolean hasWings() {
 		return wings;
 	}
 
 	public void setWings(boolean wings) {
+		this.wings = wings;
+	}
+
+	public void settwoWheeler(boolean wings) {
 		this.wings = wings;
 	}
 
@@ -29,8 +39,43 @@ public class Plane extends Vehicle {
 
 	@Override
 	public String toString() {
-		return "Car [type=" + getType() + ", mobility=" + getMobility() + ", detail=" + getDetail() + ", year="
-				+ getYear() + "]";
+		return "Plane [id=" + getId() + "type=" + getType() + ", mobility=" + getMobility() + ", detail=" + getDetail()
+				+ ", year=" + getYear() + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(wings);
+
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Plane other = (Plane) obj;
+
+		if (!super.equals(obj)) {
+			return false;
+		}
+
+		if (this.wings != other.hasWings()) {
+			return false;
+		}
+
+		return true;
+	}
+	
+	public void setExhaust(boolean wings) {
+		this.wings = wings;
 	}
 
 	@Override

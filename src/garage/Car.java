@@ -1,5 +1,7 @@
 package garage;
 
+import java.util.Objects;
+
 public class Car extends Vehicle {
 
 	private boolean exhaust;
@@ -33,10 +35,61 @@ public class Car extends Vehicle {
 	}
 
 //created a print method that overrides the method from the class vehicle
+//	comented it out so i can use the tostring
+
+//	@Override
+//	public void print() {
+//		super.print();
+//		System.out.println("Does it have an exhaust? : " + this.exhaust);
+//	}
+
 	@Override
-	public void print() {
-		super.print();
-		System.out.println("Does it have an exhaust? : " + this.exhaust);
+	public String toString() {
+		return "Car [id=" + getId() + ", type=" + getType() + ", mobility=" + getMobility() + ", detail=" + getDetail()
+				+ ", year=" + getYear() + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(exhaust);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+
+		Car other = (Car) obj;
+
+		if (!super.equals(obj)) {
+			return false;
+		}
+
+		if (this.exhaust != other.hasExhaust()) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public boolean isExhaust() {
+		return exhaust;
+	}
+
+	@Override
+	public int calcBill() {
+		if (exhaust) {
+			return 2000;
+		} else {
+			return 1000;
+		}
 	}
 
 }

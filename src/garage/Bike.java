@@ -25,4 +25,20 @@ public class Bike extends Vehicle {
 				+ " and its motto is: Run away, turn away, run away, turn away, run away");
 
 	}
+
+	@Override
+	public String toString() {
+		return "Motorbike [type=" + getType() + ", mobility=" + getMobility() + ", detail=" + getDetail() + ", year="
+				+ getYear() + "]";
+	}
+
+	@Override
+	public int calcBill() {
+		if (twoWheeler) {
+			return 2000;
+		} else {
+			return 1000;
+		}
+	}
+
 }

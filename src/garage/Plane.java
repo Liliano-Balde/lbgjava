@@ -27,4 +27,19 @@ public class Plane extends Vehicle {
 
 	}
 
+	@Override
+	public String toString() {
+		return "Car [type=" + getType() + ", mobility=" + getMobility() + ", detail=" + getDetail() + ", year="
+				+ getYear() + "]";
+	}
+
+	@Override
+	public int calcBill() {
+		if (wings) {
+			return 2000;
+		} else {
+			return 1000;
+		}
+	}
+
 }

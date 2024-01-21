@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Privategarage {
 
 //	private String name;
-	private ArrayList<Vehicle> vechicles = new ArrayList<>();
+	private ArrayList<Vehicle> vehicles = new ArrayList<>();
 
 ////	public Privategarage(String name) {
 ////		super();
@@ -23,22 +23,36 @@ public class Privategarage {
 
 //	add a vehicle
 	public void store(Vehicle vehicle) {
-		vechicles.add(vehicle);
+		vehicles.add(vehicle);
 	}
 
 //	remove a vehicle
 	public void remove(Vehicle vehicle) {
-		vechicles.remove(vehicle);
+		vehicles.remove(vehicle);
 	}
 
 	public void remove(int vehicle) {
-		vechicles.remove(vehicle);
+		vehicles.remove(vehicle);
 	}
 
 	public void print() {
 		System.out.println("Flexing Garage");
-		for (Vehicle vehicle : vechicles) {
-			vehicle.print();
+		for (Vehicle vehicle : vehicles) {
+//			vehicle.print();
 		}
 	}
+
+	public void fix() {
+		int fixBill = 0;
+		for (Vehicle vehicle : vehicles) {
+			fixBill += vehicle.calcBill();
+			System.out.println("To fix all vehicles you will have to pay " + fixBill);
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Privategarage [vechicles=" + vehicles + "]";
+	}
+
 }
